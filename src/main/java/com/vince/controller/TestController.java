@@ -1,12 +1,10 @@
 package com.vince.controller;
 
 import com.vince.model.Enum.ResultEnum;
+import com.vince.service.StudentService;
 import com.vince.util.InvokeException;
 import com.vince.util.Response;
-import com.vince.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
