@@ -6,6 +6,7 @@ import com.vince.util.InvokeException;
 import com.vince.util.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,10 +27,13 @@ public class TestController {
     @Autowired
     private StudentService studentService;
 
+    @Value("${user.name}")
+    private String userName;
+
     @RequestMapping("/")
     @ResponseBody
     public String index() {
-        log.debug("=======1=======");
+        log.debug("=======1=======" + userName);
         return "hello world";
     }
 
