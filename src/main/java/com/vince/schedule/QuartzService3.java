@@ -13,17 +13,24 @@ import java.util.Date;
  * User: 段小秋
  * Email: duanxiaoqiu@jd.com
  * Date: 2019/3/22
- * Time: 11:48
+ * Time: 16:27
  * Description:
  */
 @Slf4j
 @Component
-public class QuartzService {
+public class QuartzService3 {
 
     //    每分钟启动
     //@Scheduled(cron = "0/1 * * * * ?")
+    //@Async//开启异步方法
     public void timerToNow() {
-        log.debug("=======QuartzService1 time:{}======", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+        try {
+            log.debug("=======QuartzService3 start:{}======", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+            Thread.sleep(3000);
+            log.debug("=======QuartzService3 end:{}======", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
