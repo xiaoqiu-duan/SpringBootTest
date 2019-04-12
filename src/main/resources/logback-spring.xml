@@ -27,6 +27,30 @@
         </encoder>
     </appender>
 
+
+    <!--<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+            <fileNamePattern>${FILE_PATH}</fileNamePattern>
+
+            &lt;!&ndash; keep 15 days' worth of history &ndash;&gt;
+            <maxHistory>30</maxHistory>
+
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                &lt;!&ndash; 日志文件的最大大小 &ndash;&gt;
+                <maxFileSize>2MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+
+            &lt;!&ndash; 超出删除老文件 &ndash;&gt;
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>-->
+
     <!-- project default level -->
     <logger name="net.sh.rgface.serive" level="ERROR" />
 
