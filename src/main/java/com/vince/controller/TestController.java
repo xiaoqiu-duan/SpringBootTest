@@ -37,7 +37,7 @@ public class TestController {
         return "hello world";
     }
 
-    /*@RequestMapping("/all")
+    @RequestMapping("/all")
     @ResponseBody
     public Response all() {
         return Response.from(1, "success", studentService.findAll());
@@ -53,6 +53,6 @@ public class TestController {
         } catch (Exception e2) {
             return Response.from(ResultEnum.FAILED.toCode(), ResultEnum.FAILED.toName());
         }
-    }*/
+    }
 
 }

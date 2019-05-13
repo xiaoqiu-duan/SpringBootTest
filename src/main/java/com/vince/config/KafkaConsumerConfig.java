@@ -3,7 +3,7 @@ package com.vince.config;
 /**
  * Package: com.vince.config
  * User: 段小秋
- * Email: duanxiaoqiu@jd.com
+ * Email: xiaoqiu2017wy@163.com
  * Date: 2019/5/6
  * Time: 15:24
  * Description:

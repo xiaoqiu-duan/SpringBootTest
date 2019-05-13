@@ -20,8 +20,9 @@ import java.util.Date;
 @Component
 public class QuartzService {
 
-    //    每分钟启动
-    //@Scheduled(cron = "0/1 * * * * ?")
+    //    每60s启动
+    @Async
+    @Scheduled(cron = "0/60 * * * * ?")
     public void timerToNow() {
         log.debug("=======QuartzService1 time:{}======", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
     }

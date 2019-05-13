@@ -3,6 +3,8 @@ package com.vince.dao;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 
+import java.util.Set;
+
 /**
  * Package: com.vince.dao
  * User: 段小秋
@@ -30,6 +32,10 @@ public class JimDb {
 
     public static void set(String key, String value) {
         getJimdb().set(key, value);
+    }
+
+    public static Set<String> scan(String key){
+        return getJimdb().keys(key);
     }
 
     public static String get(String key) {
