@@ -9,9 +9,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 //@ImportResource("classpath:spring-config-*.xml")
-@PropertySource(value = {"classpath:conf.properties"},encoding="utf-8")
-@EnableAsync
-@EnableScheduling
+@PropertySource(value = {"classpath:conf.properties"}, encoding = "utf-8")
+/*@EnableAsync
+@EnableScheduling*/
 @MapperScan("com.vince.dao")
 @SpringBootApplication
 public class XqApplication {
